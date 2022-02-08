@@ -34,7 +34,7 @@
     "style linter"
   ],
   "dependencies": {
-    "stylelint-config-standard": "^22.0.0",
+    "stylelint-config-standard": "^25.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.21.0"
   },
