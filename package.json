@@ -35,13 +35,13 @@
   ],
   "dependencies": {
     "stylelint-config-standard": "^25.0.0",
-    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-scss": "^3.21.0"
   },
   "devDependencies": {
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.0.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.0.0"
   }
 }
