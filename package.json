@@ -34,9 +34,9 @@
     "style linter"
   ],
   "dependencies": {
+    "stylelint-scss": "^4.0.0"
     "stylelint-config-standard": "^25.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-scss": "^3.21.0"
   },
   "devDependencies": {
     "stylelint": "^14.0.0"
