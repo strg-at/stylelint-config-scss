@@ -34,7 +34,7 @@ jobs:
       # https://github.com/actions/checkout
       - name: Checkout Code
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.0.2
         with:
           ref: main
           token: ${{ secrets.GH_PUSH }}
@@ -42,7 +42,7 @@ jobs:
       # https://github.com/actions/setup-node
       - name: Setup Node
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3.5.0
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
@@ -51,14 +51,14 @@ jobs:
       # https://github.com/oleksiyrudenko/gha-git-credentials
       - name: Setup GIT
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
-        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        uses: oleksiyrudenko/gha-git-credentials@v2.1
         with:
           token: '${{ secrets.GH_PUSH }}'
 
       # https://github.com/actions/cache
       - name: Setup Dependency Cache
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
-        uses: actions/cache@v3
+        uses: actions/cache@v3.0.8
         with:
           path: ~/.npm
           key: npm-${{ hashFiles('package-lock.json') }}
