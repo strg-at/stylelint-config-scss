@@ -1,6 +1,6 @@
 {
-  "name": "@strg-at/stylelint-config-scss",
-  "version": "2.0.5-rc1",
+  "name": "@strg/stylelint-config-scss",
+  "version": "1.1.0",
   "description": "SCSS Stylelint configuration for STRG.",
   "author": "STRG.",
   "license": "MIT",
@@ -34,6 +34,8 @@
     "style linter"
   ],
   "dependencies": {
+    "stylelint-scss": "4.3.0",
+    "stylelint-config-standard": "28.0.0",
     "stylelint-config-standard-scss": "5.0.0"
   }
 }
