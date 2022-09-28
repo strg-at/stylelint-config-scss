@@ -44,7 +44,6 @@
     {
       matchDepTypes: ["peerDependencies"],
       addLabels: ["peer"],
-      automerge: true,
     },
     // label dev dependencies
     {
@@ -57,7 +56,19 @@
       matchManagers: ["pre-commit"],
       labels: ["dev", "pre-commit"],
       automerge: true,
-    }
+    },
+    // label github-actions
+    {
+      matchManagers: ["github-actions"],
+      labels: ["dev", "github-actions"],
+      automerge: true,
+    },
+    // label nvm
+    {
+      matchManagers: ["nvm"],
+      labels: ["dev", "nvm"],
+      automerge: true,
+    },
   ],
   timezone: "Europe/Vienna",
 }
