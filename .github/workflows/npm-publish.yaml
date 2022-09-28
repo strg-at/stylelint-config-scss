@@ -26,7 +26,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-          scope: '@strg-at'
 
       # https://github.com/actions/cache
       - name: Setup Dependency Cache
