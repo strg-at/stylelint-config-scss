@@ -53,7 +53,9 @@ jobs:
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
         uses: oleksiyrudenko/gha-git-credentials@v2.1
         with:
-          token: '${{ secrets.GH_PUSH }}'
+          token: ${{ secrets.GH_PUSH }}
+          email: ${{ secrets.STRG_AUTOMATION_USER_EMAIL }}
+          name: STRG Automation
 
       # https://github.com/actions/cache
       - name: Setup Dependency Cache
