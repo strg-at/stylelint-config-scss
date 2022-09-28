@@ -5,9 +5,9 @@ on:
   push:
     tags:
       - 'v0.[0-9]+.[0-9]+'                          # match semver releases starting with v0
-      - 'v0.[0-9]+.[0-9]+-rc[0-9]+'                 # match semver release candidates starting with v0
+      # - 'v0.[0-9]+.[0-9]+-rc[0-9]+'                 # match semver release candidates starting with v0
       - 'v[1-9][0-9]*.[0-9]+.[0-9]+'                # match semver releases >= v1
-      - 'v[1-9][0-9]*.[0-9]+.[0-9]+-rc[0-9]+'       # match semver release candidates >= v1
+      # - 'v[1-9][0-9]*.[0-9]+.[0-9]+-rc[0-9]+'       # match semver release candidates >= v1
 jobs:
   publish:
     runs-on: ubuntu-latest
