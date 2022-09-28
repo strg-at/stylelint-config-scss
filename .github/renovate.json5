@@ -1,19 +1,60 @@
 {
-  "enabled": true,
-  "semanticCommits": "enabled",
-  "dependencyDashboard": true,
-  "dependencyDashboardTitle": ":robot: Renovate Dashboard",
-  "suppressNotifications": ["prIgnoreNotification"],
-  "rebaseWhen": "conflicted",
-  "labels": ["dependencies"],
-  "packageRules": [
+  enabled: true,
+  semanticCommits: "enabled",
+  dependencyDashboard: true,
+  dependencyDashboardTitle: ":robot: Renovate Dashboard",
+  suppressNotifications: ["prIgnoreNotification"],
+  // enable pre-commit, see: https://docs.renovatebot.com/modules/manager/pre-commit/
+  "pre-commit": {
+    enabled: true,
+  },
+  extends: [
+    "config:base",
+    "default:label(dependencies)"
+  ],
+  vulnerabilityAlerts: {
+    addLabels: ["security"],
+  },
+  packageRules: [
+    // label patches
     {
-      "matchPackagePatterns": ["eslint"],
-      "labels": ["linting"]
+      matchUpdateTypes: ["patch"],
+      addLabels: ["patch"],
+      automerge: true,
     },
+    // label minor updates
     {
-      "matchDepTypes": ["optionalDependencies"],
-      "addLabels": ["optional"]
+      matchUpdateTypes: ["minor"],
+      addLabels: ["minor"],
+      automerge: true,
+    },
+    // label major updates
+    {
+      matchUpdateTypes: ["major"],
+      addLabels: ["major"],
+    },
+    // label optional dependencies
+    {
+      matchDepTypes: ["optionalDependencies"],
+      addLabels: ["optional"],
+    },
+    // label peer dependencies
+    {
+      matchDepTypes: ["peerDependencies"],
+      addLabels: ["peer"],
+    },
+    // label dev dependencies
+    {
+      matchDepTypes: ["devDependencies"],
+      addLabels: ["dev"],
+      automerge: true,
+    },
+    // label pre-commit
+    {
+      matchManagers: ["pre-commit"],
+      addLabels: ["dev", "pre-commit"],
+      automerge: true,
     }
-  ]
+  ],
+  timezone: "Europe/Vienna",
 }
