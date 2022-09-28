@@ -18,7 +18,7 @@ yarn add -D @strg/stylelint-config-scss
 // stylelint.config.js
 module.exports = {
   extends: [
-    '@strg/stylelint-config-scss'
+    '@strg-at/stylelint-config-scss'
   ]
 }
 ```
