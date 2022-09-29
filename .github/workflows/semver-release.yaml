@@ -70,10 +70,6 @@ jobs:
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
         run: npm install
 
-      - name: Security Audit
-        if: ${{ steps.detect.outputs.releaseType != 'skip' }}
-        run: npm audit --production
-
       - name: Bump Version
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
         run: 'npm version ${{ steps.detect.outputs.releaseType }} -m "release: %s"'
