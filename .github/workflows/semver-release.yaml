@@ -68,7 +68,7 @@ jobs:
 
       - name: Install Dependencies
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}
-        run: npm ci
+        run: npm install
 
       - name: Security Audit
         if: ${{ steps.detect.outputs.releaseType != 'skip' }}

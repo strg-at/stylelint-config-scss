@@ -10,7 +10,8 @@
   },
   extends: [
     "config:base",
-    "default:label(dependencies)"
+    "default:label(dependencies)",
+    "default:preserveSemverRanges",
   ],
   vulnerabilityAlerts: {
     addLabels: ["security"],
