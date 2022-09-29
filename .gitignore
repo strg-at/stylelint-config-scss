@@ -33,3 +33,6 @@ yarn-error.log*
 /test/e2e/reports/
 selenium-debug.log
 /.sonarlint
+
+# library has no package-lock.json
+package-lock.json
