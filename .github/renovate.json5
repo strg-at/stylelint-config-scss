@@ -1,6 +1,10 @@
 {
   enabled: true,
-  semanticCommits: "enabled",
+  semanticCommits: "auto",
+  separateMajorMinor: true,
+  separateMultipleMajor: true,
+  stopUpdatingLabel: "stop-updating",
+  updatePinnedDependencies: false,
   dependencyDashboard: true,
   dependencyDashboardTitle: ":robot: Renovate Dashboard",
   suppressNotifications: ["prIgnoreNotification"],
@@ -11,7 +15,7 @@
   extends: [
     "config:base",
     "default:label(dependencies)",
-    "default:preserveSemverRanges",
+    // "default:preserveSemverRanges",
   ],
   vulnerabilityAlerts: {
     addLabels: ["security"],
