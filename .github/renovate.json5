@@ -33,7 +33,6 @@
     {
       matchUpdateTypes: ["major"],
       addLabels: ["major"],
-      automerge: true,
     },
     // label optional dependencies
     {
