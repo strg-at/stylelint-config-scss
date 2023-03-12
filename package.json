@@ -42,7 +42,7 @@
     "stylelint-config-standard-scss": "^3.0.0"
   },
   "devDependencies": {
-    "stylelint": "^14.0.0"
+    "stylelint": "^15.0.0"
   },
   "peerDependencies": {
     "stylelint": "^14.0.0"
